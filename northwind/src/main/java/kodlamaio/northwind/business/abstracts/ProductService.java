@@ -7,6 +7,7 @@ import java.util.List;
 import kodlamaio.northwind.core.utilities.results.DataResult;
 import kodlamaio.northwind.core.utilities.results.Result;
 import kodlamaio.northwind.entities.concretes.Product;
+import kodlamaio.northwind.entities.dtos.ProductWithCategoryDto;
 
 public interface ProductService {
 	DataResult<List<Product>> getAll();
@@ -35,6 +36,8 @@ public interface ProductService {
 	
 	DataResult<List<Product>> getByNameAndCategoryId(String productName, int categoryId);
 	//select * from where products where product_name = bişey and categoryId=bişey;
+	
+	DataResult<List<ProductWithCategoryDto>> getProductWithCategoryDetails();
 	
 
 }
